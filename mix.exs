@@ -1,6 +1,6 @@
 Code.eval_file("mess.exs", (if File.exists?("../../lib/mix/mess.exs"), do: "../../lib/mix/"))
 
-defmodule Coordination.MixProject do
+defmodule FederatedArchives.MixProject do
   use Mix.Project
 
   def project do
@@ -16,7 +16,7 @@ defmodule Coordination.MixProject do
     end
     ++
     [
-      app: :coordination,
+      app: :federated_archives,
       version: "0.0.1",
       elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -25,12 +25,12 @@ defmodule Coordination.MixProject do
       aliases: aliases(),
       description: "A flavour of Bonfire",
         homepage_url: "https://bonfirenetworks.org/",
-        source_url: "https://github.com/bonfire-networks/coordination",
+        source_url: "https://github.com/bonfire-networks/federated_archives",
         package: [
           licenses: ["AGPL-3.0"],
           links: %{
-            "Repository" => "https://github.com/bonfire-networks/coordination",
-            "Hexdocs" => "https://hexdocs.pm/coordination"
+            "Repository" => "https://github.com/bonfire-networks/federated_archives",
+            "Hexdocs" => "https://hexdocs.pm/federated_archives"
           }
         ],
         docs: [
@@ -45,7 +45,9 @@ defmodule Coordination.MixProject do
 
           {:floki, ">= 0.0.0", only: [:dev, :test]},
 
-          {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+          {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+
+          {:igniter, "~> 0.5", optional: true}
         ])
     ]
   end

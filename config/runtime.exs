@@ -1,3 +1,3 @@
 import Config
 
-Coordination.RuntimeConfig.config()
+FederatedArchives.RuntimeConfig.config()

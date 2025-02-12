@@ -1,4 +1,4 @@
-defmodule Coordination.RuntimeConfig do
+defmodule FederatedArchives.RuntimeConfig do
   # use Bonfire.Common.Localise
 
   @behaviour Bonfire.Common.ConfigModule
@@ -10,7 +10,7 @@ defmodule Coordination.RuntimeConfig do
   def config do
     import Config
 
-    # config :coordination,
-    #   modularity: System.get_env("ENABLE_coordination") || :disabled
+    # config :federated_archives,
+    #   modularity: System.get_env("ENABLE_federated_archives") || :disabled
   end
 end

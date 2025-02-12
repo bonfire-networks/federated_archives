@@ -1,4 +1,4 @@
-defmodule Coordination.ConnCase do
+defmodule FederatedArchives.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -26,7 +26,7 @@ defmodule Coordination.ConnCase do
       import Bonfire.UI.Common.Testing.Helpers
       import Phoenix.LiveViewTest
 
-      # import Coordination.Fake
+      # import FederatedArchives.Fake
 
       # The default endpoint for testing
       @endpoint Application.compile_env!(:bonfire, :endpoint_module)
@@ -34,7 +34,7 @@ defmodule Coordination.ConnCase do
   end
 
   setup tags do
-    import Coordination
+    import FederatedArchives
 
     Bonfire.Common.Test.Interactive.setup_test_repo(tags)
 

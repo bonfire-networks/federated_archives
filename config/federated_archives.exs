@@ -1,6 +1,6 @@
 import Config
 
-#### Extension-specific compile-time configuration goes here, everything else should be in `Coordination.RuntimeConfig`
+#### Extension-specific compile-time configuration goes here, everything else should be in `FederatedArchives.RuntimeConfig`
 
 
 # Please note that most of these are defaults meant to be overridden by instance admins in Settings rather than edited here
@@ -11,7 +11,7 @@ config :bonfire, :ui,
     instance_theme_light: "light",
     instance_icon: "/images/bonfire-icon.png",
     instance_image: "/images/bonfires.png",
-    instance_description: "This is a Bonfire (coordination flavour) instance for testing purposes",
+    instance_description: "This is a Bonfire (federated_archives flavour) instance for testing purposes",
     instance_welcome: [
       title: "👋 Welcome",
       description:
@@ -53,7 +53,7 @@ More details at https://bonfirenetworks.org",
   #   process: "Define a process"
   # ],
   # smart_input_components: [ # NOTE: replaced by the SmartInputModule behaviour
-  #   task: Bonfire.UI.Coordination.CreateTaskLive,
+  #   task: Bonfire.UI.FederatedArchives.CreateTaskLive,
   #   upcycle_intent: Bonfire.Upcycle.Web.CreateIntentLive,
   #   upcycle_resource: Bonfire.Upcycle.Web.CreateResourceLive,
   #   upcycle_transfer: Bonfire.Upcycle.Web.CreateTransferLive,

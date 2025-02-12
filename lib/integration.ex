@@ -1,4 +1,4 @@
-defmodule Coordination do
+defmodule FederatedArchives do
   @moduledoc "./README.md" |> File.stream!() |> Enum.drop(1) |> Enum.join()
 
   alias Bonfire.Common.Config
@@ -11,7 +11,7 @@ defmodule Coordination do
   #   icon: "bi:app",
   #   description: l("An awesome extension")
   #   # default_nav: [
-  #   #   Coordination.Web.HomeLive
+  #   #   FederatedArchives.Web.HomeLive
   #   # ]
   # )
 
