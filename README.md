@@ -9,12 +9,14 @@ Federated Archives bundles essential extensions from [Social](https://github.com
 - [Bonfire.Pandora](https://github.com/bonfire-networks/bonfire_pandora): Integration with the [pandora](https://code.0x2620.org/0x2620/pandora) API to load, search, filter, curate, annotate movies
 
 ## Releases
+
 *No public releases yet*
 
 ## Maintainers
-@cranio_is_thinking - 
-@ivanminutillo - @bernini@social.coop
-@mayel - @mayel@sunbeam.city
+
+- @cranio_is_thinking - 
+- @ivanminutillo - @bernini@social.coop
+- @mayel - @mayel@sunbeam.city
 
 ## News
 - ...
