@@ -6,8 +6,8 @@ The goal is to facilitate seamless sharing of movie catalogs between participati
 ## Extensions
 Federated Archives bundles essential extensions from [Social](https://github.com/bonfire-networks/social) and adds the following:
 
-- [Bonfire.Pandora](https://github.com/bonfire-networks/bonfire_pandora): Integration with the [pandora](https://code.0x2620.org/0x2620/pandora) API to load, search, filter, curate, annotate movies
-
+- [Bonfire.Pandora](https://github.com/bonfire-networks/bonfire_pandora): Integration with the [pandora](https://code.0x2620.org/0x2620/pandora) API to load, search, filter, curate, annotate movies (You must have a working pandora instance to use this extension)
+- [Bonfire.Open.Id](https://github.com/bonfire-networks/bonfire_open_id)
 ## Releases
 
 *No public releases yet*
