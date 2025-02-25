@@ -20,6 +20,7 @@
   "beam_file": {:hex, :beam_file, "0.6.2", "efd54ec60be6a03f0a8f96f72b0353427196613289c46032d3500f0ab6c34d32", [:mix], [], "hexpm", "09a99e8e5aad674edcad7213b0d7602375dfd3c7d02f8e3136e3efae0bcc9c56"},
   "blurhash": {:hex, :rinpatch_blurhash, "0.1.0", "01a888b0f5f1f382ab52e4396f01831cbe8486ea5828604c90f4dac533d39a4b", [:mix], [{:mogrify, "~> 0.8.0", [hex: :mogrify, repo: "hexpm", optional: true]}], "hexpm", "19911a5dcbb0acb9710169a72f702bce6cb048822b12de566ccd82b2cc42b907"},
   "bolt_sips": {:hex, :bolt_sips, "2.0.11", "a1cb78d8db4aba750f6771a9fd4a10b3300618b7b0433b12105c64d21d27b4ba", [:mix], [{:calendar, "~> 0.17.2", [hex: :calendar, repo: "hexpm", optional: false]}, {:db_connection, "~> 2.4", [hex: :db_connection, repo: "hexpm", optional: false]}, {:jason, "~> 1.2", [hex: :jason, repo: "hexpm", optional: false]}, {:poison, "~> 3.1", [hex: :poison, repo: "hexpm", optional: false]}], "hexpm", "227a6669e14fa6d331738857b32b5cd022b4c13808e947ccfec8eccb8fedb0e5"},
+  "bonfire_classify": {:git, "https://github.com/bonfire-networks/bonfire_classify", "18b07580dec1e90a2334e26c8a2ed55b28ffe578", []},
   "bonfire_common": {:git, "https://github.com/bonfire-networks/bonfire_common", "bf06c33248ba48391398d440383f4dbe6aa9bd78", []},
   "bonfire_data_edges": {:git, "https://github.com/bonfire-networks/bonfire_data_edges", "224212f3eb98bb2a534b4241b92b30dc30d0580b", []},
   "bonfire_data_identity": {:git, "https://github.com/bonfire-networks/bonfire_data_identity", "2b8afcfb4cca3f8c7d4ff5b683c6abbdd999b76a", []},
