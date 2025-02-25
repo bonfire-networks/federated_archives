@@ -1,4 +1,4 @@
-Code.eval_file("mess.exs", (if File.exists?("../../lib/mix/mess.exs"), do: "../../lib/mix/"))
+Code.eval_file("mess.exs", if(File.exists?("../../lib/mix/mess.exs"), do: "../../lib/mix/"))
 
 defmodule FederatedArchives.MixProject do
   use Mix.Project
@@ -13,17 +13,16 @@ defmodule FederatedArchives.MixProject do
       ]
     else
       []
-    end
-    ++
-    [
-      app: :federated_archives,
-      version: "0.0.1",
-      elixir: "~> 1.10",
-      elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: Mix.compilers(),
-      start_permanent: Mix.env() == :prod,
-      aliases: aliases(),
-      description: "A flavour of Bonfire",
+    end ++
+      [
+        app: :federated_archives,
+        version: "0.0.1",
+        elixir: "~> 1.10",
+        elixirc_paths: elixirc_paths(Mix.env()),
+        compilers: Mix.compilers(),
+        start_permanent: Mix.env() == :prod,
+        aliases: aliases(),
+        description: "A flavour of Bonfire",
         homepage_url: "https://bonfirenetworks.org/",
         source_url: "https://github.com/bonfire-networks/federated_archives",
         package: [
@@ -39,17 +38,16 @@ defmodule FederatedArchives.MixProject do
           # extra pages to include
           extras: ["README.md"]
         ],
-      deps:
-        Mess.deps([
-          {:phoenix_live_reload, "~> 1.2", only: :dev},
+        deps:
+          Mess.deps([
+            {:phoenix_live_reload, "~> 1.2", only: :dev},
 
-          {:floki, ">= 0.0.0", only: [:dev, :test]},
+            # {:floki, ">= 0.0.0", only: [:dev, :test]},
 
-          {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-
-          {:igniter, "~> 0.5", optional: true}
-        ])
-    ]
+            {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+            {:igniter, "~> 0.5", optional: true}
+          ])
+      ]
   end
 
   def application, do: [extra_applications: [:logger, :runtime_tools]]
