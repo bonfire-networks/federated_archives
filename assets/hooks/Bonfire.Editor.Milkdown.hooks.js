@@ -13,16 +13,14 @@ import { $prose, replaceAll, insert } from "@milkdown/utils";
 import {
 	commonmark, headingAttr, paragraphAttr 
 } from "@milkdown/kit/preset/commonmark";
-import { configureLinkTooltip, linkTooltipPlugin } from '@milkdown/kit/component/link-tooltip';
+// import { configureLinkTooltip, linkTooltipPlugin } from '@milkdown/kit/component/link-tooltip';
 
 // import { history } from "@milkdown/kit/plugin/history";
 import { gfm } from "@milkdown/kit/preset/gfm";
 import { emoji } from "@milkdown/plugin-emoji";
 import { listener, listenerCtx } from "@milkdown/kit/plugin/listener";
 import { SlashProvider, slashFactory } from "@milkdown/kit/plugin/slash";
-// import { gemoji } from "gemoji";
 import { clipboard } from "@milkdown/kit/plugin/clipboard";
-// import { createPopup } from "@picmo/popup-picker";
 import { Plugin, PluginKey } from "@milkdown/kit/prose/state";
 import { Decoration, DecorationSet } from "@milkdown/kit/prose/view";
 import 'emoji-picker-element';
@@ -405,7 +403,7 @@ const createEditor = async (_this, hidden_input, composer$) => {
 				if (level === 5) return { class: 'text-xl', "data-el-type": 'h4', id: null };
 				if (level === 6) return { class: 'text-xl', "data-el-type": 'h4', id: null };
 			});
-			ctx.set(paragraphAttr.key, () => ({ class: 'text-base' }));
+			ctx.set(paragraphAttr.key, () => ({ class: 'text-[15px]' }));
 			ctx.update(editorViewOptionsCtx, (prev) => ({
 				...prev,
 				attributes: { class: 'milkdown-editor mx-auto outline-none', spellcheck: 'false' },
@@ -457,11 +455,11 @@ const createEditor = async (_this, hidden_input, composer$) => {
 			}));
 		})
 		//.config(nord)
-		.config(configureLinkTooltip)
+		// .config(configureLinkTooltip)
 		.use(clipboard)
 		.use(commonmark)
 		.use(gfm)
-		.use(linkTooltipPlugin)
+		// .use(linkTooltipPlugin)
 		// .use(remarkInlineLinkPlugin)
 		.use(emoji)
 		.use(listener)
