@@ -5,25 +5,21 @@ import Config
 # Please note that most of these are defaults meant to be overridden by instance admins in Settings rather than edited here
 config :bonfire, :ui,
   theme: [
-    # instance_name: "Bonfire",
+    instance_name: "Federated Archives",
     instance_theme: "bonfire",
     instance_theme_light: "light",
     instance_icon: "/images/bonfire-icon.png",
     instance_image: "/images/bonfires.png",
     instance_description:
-      "This is a Bonfire (federated_archives flavour) instance for testing purposes",
+      "Your federated archives instance for preserving and sharing knowledge.",
     instance_welcome: [
-      title: "👋 Welcome",
+      title: "👋 Welcome to Federated Archives",
       description:
-        "Bonfire is a federated social networking toolkit to customise and host your own online space and control your experience at the most granular level.
-
-More details at https://bonfirenetworks.org",
+        "This is a space for archiving, preserving, and sharing knowledge across the fediverse. Join our community to contribute and explore archived content.",
       links: [
-        "About Bonfire": "https://bonfirenetworks.org/",
-        "About ValueFlows": "https://valueflo.ws/",
-        Forum: "https://socialhub.activitypub.rocks/g/bonfire/activity/posts",
-        "Community Chat": "https://matrix.to/#/%23bonfire-networks:matrix.org",
-        Contribute: "https://bonfirenetworks.org/contribute/"
+        "About Archives": "https://example.org/about",
+        "Documentation": "https://example.org/docs",
+        "Contribute": "https://example.org/contribute"
       ]
     ]
   ],

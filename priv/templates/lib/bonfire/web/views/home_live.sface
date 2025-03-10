@@ -1,0 +1,68 @@
+<div class="lg:p-0 w-full h-full flex-1 flex flex-col max-w-[640px] mx-auto">
+  <section class="mb-4 flex flex-col gap-6 border border-base-content/10 shadow-lg bg-base-100 pb-8 rounded-box">
+    <div
+      :if={Config.get([:ui, :theme, :instance_image], nil)}
+      style={"background-image: url(#{Config.get([:ui, :theme, :instance_image], nil)})"}
+      class="bg-center bg-no-repeat h-banner bg-cover bg-white w-full rounded-t-box"
+    >
+    </div>
+    <div class="flex px-4 flex-col gap-3">
+      <h2 class="text-4xl font-semibold">{Config.get([:ui, :theme, :instance_name], "Federated Archives")}</h2>
+      <h3 class="md:text-base text-base-content/90">{Config.get([:ui, :theme, :instance_description], "Your federated archives instance for preserving and sharing knowledge.")}</h3>
+    </div>
+
+    <!-- <div class="flex items-center justify-center px-4 gap-4">
+      <LinkLive to={~p"/about"} class="btn btn-sm lg:btn-md btn-secondary btn-soft flex-1">
+        {l("About")}
+      </LinkLive>
+      <LinkLive to={~p"/conduct"} class="btn btn-sm lg:btn-md btn-secondary btn-soft flex-1">
+        {l("Conduct")}
+      </LinkLive>
+      <LinkLive to={~p"/users"} class="btn btn-sm lg:btn-md btn-secondary btn-soft flex-1">
+        {l("Members")}
+      </LinkLive>
+    </div> -->
+  </section>
+
+  <section class="flex flex-col gap-6">
+    <!-- Custom Archives welcome box -->
+    <div class="w-full border border-base-content/10 shadow-lg bg-base-100 p-4 rounded-box">
+      <div class="text-2xl font-semibold mb-3">
+        {l("Welcome to Federated Archives")}
+      </div>
+      <p class="mb-4">
+        {l("This is a space for archiving, preserving, and sharing knowledge across the fediverse. Join our community to contribute and explore archived content.")}
+      </p>
+      <div class="flex gap-3">
+        <LinkLive to={~p"/signup"} class="btn btn-primary">
+          {l("Join Now")}
+        </LinkLive>
+        <LinkLive to={~p"/pandora"} class="btn btn-secondary">
+          {l("Search Archives")}
+        </LinkLive>
+      </div>
+    </div>
+
+    <!-- Recent activities feed -->
+    <div class="w-full border border-base-content/10 shadow-lg bg-base-100 lg:!mt-0 rounded-box">
+      <div class="font-semibold h-[50px] flex items-center px-4">
+        {l("Recent archives")}
+      </div>
+      <StatefulComponent
+        module={maybe_component(Bonfire.UI.Social.FeedLive, @__context__)}
+        :if={@feed_component_id}
+        id={@feed_component_id}
+        hide_filters
+        feed_id={@feed_id}
+        feed_name={@feed_name}
+        feed_ids={@feed_ids}
+        top_page="Explore"
+        page_title={@page_title}
+        feed={@feed}
+        page_info={@page_info}
+        loading={@loading}
+        time_limit={30}
+      />
+    </div>
+  </section>
+</div>
