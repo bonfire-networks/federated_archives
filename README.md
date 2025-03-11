@@ -22,7 +22,7 @@ Federated Archives bundles essential extensions from [Social](https://github.com
 - ...
 
 ## Thanks
-To J of [0x2620.org](0x2620.org)
+To Jan Gerber of [0x2620.org](https://0x2620.org)
 
 ## Copyright and License
 
