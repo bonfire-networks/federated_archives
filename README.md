@@ -21,6 +21,9 @@ Federated Archives bundles essential extensions from [Social](https://github.com
 ## News
 - ...
 
+## Thanks
+To J of [0x2620.org](0x2620.org)
+
 ## Copyright and License
 
 Copyright (c) 2025 Bonfire Contributors
