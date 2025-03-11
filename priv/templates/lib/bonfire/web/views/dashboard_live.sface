@@ -1,5 +1,5 @@
- <Bonfire.PanDoRa.Web.SearchLive 
+<StatefulComponent
+  module={maybe_component(Bonfire.PanDoRa.Web.SearchLive , @__context__)}
   id="dashboard-search-archive"
-  term={@term}
   current_user={@current_user}
-/>
+/>  
