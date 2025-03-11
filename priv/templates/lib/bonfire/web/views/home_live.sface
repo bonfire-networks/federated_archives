@@ -26,7 +26,7 @@
 
   <section class="flex flex-col gap-6">
     <!-- Custom Archives welcome box -->
-    <div class="w-full border border-base-content/10 shadow-lg bg-base-100 p-4 rounded-box">
+    <!-- <div class="w-full border border-base-content/10 shadow-lg bg-base-100 p-4 rounded-box">
       <div class="text-2xl font-semibold mb-3">
         {l("Welcome to Federated Archives")}
       </div>
@@ -41,10 +41,10 @@
           {l("Search Archives")}
         </LinkLive>
       </div>
-    </div>
+    </div> -->
 
     <!-- Recent activities feed -->
-    <div class="w-full border border-base-content/10 shadow-lg bg-base-100 lg:!mt-0 rounded-box">
+    <!-- <div class="w-full border border-base-content/10 shadow-lg bg-base-100 lg:!mt-0 rounded-box">
       <div class="font-semibold h-[50px] flex items-center px-4">
         {l("Recent archives")}
       </div>
@@ -63,6 +63,6 @@
         loading={@loading}
         time_limit={30}
       />
-    </div>
+    </div> -->
   </section>
 </div>
