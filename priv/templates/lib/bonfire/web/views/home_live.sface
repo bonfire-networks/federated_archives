@@ -8,7 +8,7 @@
     </div>
     <div class="flex px-4 flex-col gap-3">
       <h2 class="text-4xl font-semibold">{Config.get([:ui, :theme, :instance_name], "Federated Archives")}</h2>
-      <h3 class="md:text-base text-base-content/90">{Config.get([:ui, :theme, :instance_description], "Your federated archives instance for preserving and sharing knowledge.")}</h3>
+      <h3 class="md:text-base text-base-content/90">{rich(Config.get([:ui, :theme, :instance_description], "Your federated archives instance for preserving and sharing knowledge."))}</h3>
     </div>
 
     <!-- <div class="flex items-center justify-center px-4 gap-4">
