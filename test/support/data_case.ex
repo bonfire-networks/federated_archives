@@ -23,6 +23,8 @@ defmodule FederatedArchives.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       # import FederatedArchives.DataCase
+
+      @moduletag :backend
     end
   end
 
