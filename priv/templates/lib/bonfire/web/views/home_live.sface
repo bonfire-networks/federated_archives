@@ -62,6 +62,7 @@
         page_info={@page_info}
         loading={@loading}
         time_limit={30}
+        current_url="/feed/"
       />
     </div> -->
   </section>
