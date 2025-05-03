@@ -6,7 +6,7 @@ defmodule Bonfire.Web.Views.HomeLive do
   use_if_enabled(Bonfire.UI.Common.Web.Native, :view)
 
   alias Bonfire.Me.Accounts
-  alias Bonfire.Common.Settings
+  use Bonfire.Common.Settings
 
   on_mount {LivePlugs, [Bonfire.UI.Me.LivePlugs.LoadCurrentUser]}
 
