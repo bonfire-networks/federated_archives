@@ -1,0 +1,11 @@
+[main]
+host = https://app.transifex.com
+
+[o:bonfire:p:bonfire:r:federated_archives]
+file_filter            = priv/localisation/<lang>/LC_MESSAGES/federated_archives.po
+source_file            = priv/localisation/federated_archives.pot
+type                   = PO
+minimum_perc           = 0
+replace_edited_strings = false
+keep_translations      = false
+
