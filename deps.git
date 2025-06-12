@@ -1,15 +1,12 @@
 # bonfire = "https://github.com/bonfire-networks/bonfire"
 social = "https://github.com/bonfire-networks/social"
+
 bonfire_pandora = "https://github.com/bonfire-networks/bonfire_pandora"
 
 bonfire_messages = "https://github.com/bonfire-networks/bonfire_messages"
 bonfire_ui_messages = "https://github.com/bonfire-networks/bonfire_ui_messages"
 
 bonfire_ui_reactions = "https://github.com/bonfire-networks/bonfire_ui_reactions"
-
-bonfire_poll = "https://github.com/bonfire-networks/bonfire_poll"
-
-# bonfire_label = "https://github.com/bonfire-networks/bonfire_label"
 
 bonfire_classify = "https://github.com/bonfire-networks/bonfire_classify"
 
@@ -25,7 +22,11 @@ bonfire_api_graphql = "https://github.com/bonfire-networks/bonfire_api_graphql"
 bonfire_open_id = "https://github.com/bonfire-networks/bonfire_open_id"
 
 ## EXPERIMENTAL ##
-# bonfire_geolocate = "https://github.com/bonfire-networks/bonfire_geolocate"
+# bonfire_poll = "https://github.com/bonfire-networks/bonfire_poll"
+
+# bonfire_label = "https://github.com/bonfire-networks/bonfire_label"
+
+bonfire_geolocate = "https://github.com/bonfire-networks/bonfire_geolocate"
 # bonfire_gatherings = "https://github.com/bonfire-networks/bonfire_gatherings"
 
 # bonfire_pages = "https://github.com/bonfire-networks/bonfire_pages"
