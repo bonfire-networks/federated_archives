@@ -14,7 +14,7 @@ Federated Archives bundles essential extensions from [Social](https://github.com
 
 ## Maintainers
 
-- @cranio_is_thinking - 
+- @cranio_is_thinking - @archivio.etna.foundation
 - @ivanminutillo - @bernini@social.coop
 - @mayel - @mayel@sunbeam.city
 
