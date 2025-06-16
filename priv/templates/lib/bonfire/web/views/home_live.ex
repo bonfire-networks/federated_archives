@@ -40,7 +40,7 @@ defmodule Bonfire.Web.Views.HomeLive do
         l("Contribute") => "https://example.org/contribute"
       })
 
-    app = String.capitalize(Bonfire.Application.name())
+    app = String.capitalize(Bonfire.Application.name_and_flavour())
 
     {:ok,
      socket
