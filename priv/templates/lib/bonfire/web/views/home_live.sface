@@ -11,7 +11,7 @@
       <div class="prose">{rich(Config.get([:ui, :theme, :instance_description], "Your federated archives instance for preserving and sharing knowledge."))}</div>
     </div>
 
-    <!-- <div class="flex items-center justify-center px-4 gap-4">
+    {!-- <div class="flex items-center justify-center px-4 gap-4">
       <LinkLive to={~p"/about"} class="btn btn-sm lg:btn-md btn-secondary btn-soft flex-1">
         {l("About")}
       </LinkLive>
@@ -21,12 +21,13 @@
       <LinkLive to={~p"/users"} class="btn btn-sm lg:btn-md btn-secondary btn-soft flex-1">
         {l("Members")}
       </LinkLive>
-    </div> -->
+    </div> --}
   </section>
 
   <section class="flex flex-col gap-6">
-    <!-- Custom Archives welcome box -->
-    <!-- <div class="w-full border border-base-content/10 shadow-lg bg-base-100 p-4 rounded-box">
+    
+    {!-- <!-- Custom Archives welcome box -->
+    <div class="w-full border border-base-content/10 shadow-lg bg-base-100 p-4 rounded-box">
       <div class="text-2xl font-semibold mb-3">
         {l("Welcome to Federated Archives")}
       </div>
@@ -41,10 +42,11 @@
           {l("Search Archives")}
         </LinkLive>
       </div>
-    </div> -->
+    </div> --}
 
-    <!-- Recent activities feed -->
-    <!-- <div class="w-full border border-base-content/10 shadow-lg bg-base-100 lg:!mt-0 rounded-box">
+    
+    {!-- 
+    <!-- Recent activities feed --><div class="w-full border border-base-content/10 shadow-lg bg-base-100 lg:!mt-0 rounded-box">
       <div class="font-semibold h-[50px] flex items-center px-4">
         {l("Recent archives")}
       </div>
@@ -64,6 +66,6 @@
         time_limit={30}
         current_url="/feed/"
       />
-    </div> -->
+    </div> --}
   </section>
 </div>
