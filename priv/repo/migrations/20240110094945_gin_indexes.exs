@@ -38,9 +38,11 @@ defmodule Bonfire.Search.Repo.Migrations.GinIndexes do
     execute """
       DROP INDEX IF EXISTS #{table}_gin_index;
     """
+    
+    concurrently = if(System.get_env("DB_MIGRATE_INDEXES_CONCURRENTLY") != "false", do: "CONCURRENTLY", else: "")
 
     execute """
-      CREATE INDEX CONCURRENTLY #{table}_gin_index 
+      CREATE INDEX #{concurrently} #{table}_gin_index 
         ON #{table} 
         USING gin (#{fields});
     """
