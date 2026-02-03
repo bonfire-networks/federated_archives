@@ -10,7 +10,7 @@ geo_postgis = "~> 3.1"
 geo = "~> 4.0"
 
 # Other
-phoenix = "~> 1.7.0" # note: should match version supported by version of surface used
+phoenix = "~> 1.8" # note: should match version supported by version of surface used; bonfire_ui_social etc. require 1.8
 phoenix_live_view = "~> 1.1" # usually should let surface or bonfire_ui_common decide the version
 owl = "~> 0.11" # command line UI
 httpoison = "~> 2.1"
