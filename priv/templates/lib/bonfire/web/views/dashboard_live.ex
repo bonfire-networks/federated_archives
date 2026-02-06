@@ -12,7 +12,6 @@ defmodule Bonfire.Web.Views.DashboardLive do
       socket
       |> assign(:page_title, "Search in your archive")
       |> assign(:without_secondary_widgets, true)
-      |> assign(:nav_items, Bonfire.Common.ExtensionModule.default_nav())
       |> assign(:term, nil)
     }
   end
