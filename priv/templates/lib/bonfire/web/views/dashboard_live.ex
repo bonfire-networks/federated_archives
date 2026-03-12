@@ -7,12 +7,14 @@ defmodule Bonfire.Web.Views.DashboardLive do
 
   on_mount {LivePlugs, [Bonfire.UI.Me.LivePlugs.LoadCurrentUser]}
 
-  def mount(_params, _session, socket) do
+  def mount(_params, session, socket) do
+    csrf_token = session["_csrf_token"] || session["csrf_token"]
     {:ok,
       socket
       |> assign(:page_title, "Search in your archive")
       |> assign(:without_secondary_widgets, true)
       |> assign(:term, nil)
+      |> assign(:csrf_token, csrf_token)
     }
   end
 

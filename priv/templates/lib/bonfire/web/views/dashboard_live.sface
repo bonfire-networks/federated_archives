@@ -1,5 +1,12 @@
-<StatefulComponent
-  module={maybe_component(Bonfire.PanDoRa.Web.SearchLive , @__context__)}
-  id="dashboard-search-archive"
-  current_user={@current_user}
-/>  
+<div class="flex flex-col gap-4">
+  <StatefulComponent
+    module={maybe_component(Bonfire.PanDoRa.Components.ConnectPandoraLive, @__context__)}
+    id="connect_pandora_dashboard"
+    csrf_token={@csrf_token}
+  />
+  <StatefulComponent
+    module={maybe_component(Bonfire.PanDoRa.Web.SearchLive , @__context__)}
+    id="dashboard-search-archive"
+    current_user={@current_user}
+  />
+</div>  

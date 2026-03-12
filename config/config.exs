@@ -28,4 +28,4 @@ config :bonfire_data_identity, Bonfire.Data.Identity.Credential, hasher_module: 
 import_config "../../ember/config/bonfire_data.exs"
 
 import_config "federated_archives.exs"
-# import_config "#{Mix.env()}.exs"
+import_config "#{Mix.env()}.exs"
