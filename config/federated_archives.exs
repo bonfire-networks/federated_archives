@@ -6,10 +6,11 @@ import Config
 config :bonfire, :ui,
   # Pandora annotations: add timestamp badge before note (click to seek on movie player)
   object_preview: [
-    Bonfire.Data.Social.Post: [
-      Bonfire.PanDoRa.Web.AnnotationTimestampBadgeLive,
-      Bonfire.UI.Social.Activity.NoteLive
-    ]
+    {Bonfire.Data.Social.Post,
+     [
+       Bonfire.PanDoRa.Web.AnnotationTimestampBadgeLive,
+       Bonfire.UI.Social.Activity.NoteLive
+     ]}
   ],
   theme: [
     instance_name: "Federated Archives",
