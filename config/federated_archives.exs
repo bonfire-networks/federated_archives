@@ -4,6 +4,13 @@ import Config
 
 # Please note that most of these are defaults meant to be overridden by instance admins in Settings rather than edited here
 config :bonfire, :ui,
+  # Pandora annotations: add timestamp badge before note (click to seek on movie player)
+  object_preview: [
+    Bonfire.Data.Social.Post: [
+      Bonfire.PanDoRa.Web.AnnotationTimestampBadgeLive,
+      Bonfire.UI.Social.Activity.NoteLive
+    ]
+  ],
   theme: [
     instance_name: "Federated Archives",
     instance_theme: "bonfire",
