@@ -8,6 +8,7 @@ config :bonfire, :ui,
   object_preview: [
     {Bonfire.Data.Social.Post,
      [
+       Bonfire.PanDoRa.Web.AnnotationVideoPreviewLive,
        Bonfire.PanDoRa.Web.AnnotationThumbnailLive,
        Bonfire.PanDoRa.Web.AnnotationTimestampBadgeLive,
        Bonfire.UI.Social.Activity.NoteLive
