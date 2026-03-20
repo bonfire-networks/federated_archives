@@ -13,19 +13,14 @@ let PreviewActivity = {
 			(element.offsetHeight < element.scrollHeight ||
 				element.offsetWidth < element.scrollWidth)
 		) {
-			console.log("element has an overflow, ie. truncated with CSS line-clamp");
 			return true;
-		} else {
-			console.log("element is not truncated");
-			return false;
 		}
+		return false;
 	},
 	mounted() {
 		this.el.addEventListener("click", (e) => {
-			console.log("PreviewActivity clicked");
 			let trigger = this.el.querySelector(".open_preview_link");
 			let anchor = e.target.closest("a");
-			console.log(e.target);
 
 			// this was used to expand long posts by clicking on them, now replaced with a 'Read more' button
 			// let previewable_activity = e.target.closest('.previewable_activity')
@@ -39,6 +34,7 @@ let PreviewActivity = {
 					window.getSelection().toString() == "") &&
 				!e.target.closest("button") &&
 				!e.target.closest("figure") &&
+				!e.target.closest(".pandora-video-preview-wrapper") &&
 				!e.target.closest(".dropdown") &&
 				!e.target.closest("[data-id=activity_actions]") &&
 				!e.target.closest("[data-id=labelled_widget]")
@@ -281,4 +277,14 @@ let CloseAll = {
 	},
 };
 
-export { PreviewActivity, PreviewExtra, ClosePreview, CloseAll };
+// Minimal MainFeed hook for feed visibility during navigation (matches bonfire_ui_social)
+let MainFeed = {
+	mounted() {
+		try {
+			sessionStorage.removeItem("bonfire_preview_entry_url");
+		} catch (_) {}
+	},
+	destroyed() {}
+};
+
+export { PreviewActivity, PreviewExtra, ClosePreview, CloseAll, MainFeed };

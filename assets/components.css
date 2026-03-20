@@ -807,3 +807,8 @@ div[s-sicz3][data-id="object_body"][data-rendered="smart_input"] {
 .p_line_clamp_6[s-xsoi6] p[s-xsoi6] {
   display: contents;
 }
+
+/* Pandora video preview: icon512 poster adapted to player 16:9 */
+.pandora-video-preview-wrapper video.pandora-video-preview {
+  object-fit: cover;
+}

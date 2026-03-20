@@ -8,6 +8,7 @@ export default {
 	mounted() {
 		// const canvas = document.createElement('canvas');
 		const canvas = this.el.getElementsByTagName("canvas")[0];
+		if (!canvas) return;
 		// console.log(canvas)
 		const w = canvas.width || 40;
 		const h = canvas.height || 40;

@@ -1,7 +1,7 @@
 # bonfire = "https://github.com/bonfire-networks/bonfire"
 social = "https://github.com/bonfire-networks/social"
-
-bonfire_pandora = "https://github.com/bonfire-networks/bonfire_pandora"
+bonfire_pandora = "https://github.com/bonfire-networks/bonfire_pandora#dev"
+bonfire_ui_social = "https://code.etna.foundation/Bonfire/bonfire_ui_social_federated_archives"
 
 bonfire_messages = "https://github.com/bonfire-networks/bonfire_messages"
 bonfire_ui_messages = "https://github.com/bonfire-networks/bonfire_ui_messages"
