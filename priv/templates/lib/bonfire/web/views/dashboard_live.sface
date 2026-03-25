@@ -6,8 +6,7 @@
   />
 
   <div class="w-full flex flex-col lg:rounded-xl lg:shadow bg-base-100">
-    <Bonfire.PanDoRa.Web.SearchLive
-      id="search-component"
+    <Bonfire.PanDoRa.Web.ArchiveSearchPanel
       term={@term}
       current_user={@current_user}
       filter_sections={@filter_sections}
