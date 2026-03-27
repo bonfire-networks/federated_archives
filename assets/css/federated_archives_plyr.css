@@ -1,0 +1,7 @@
+/**
+ * Federated Archives flavour: composes bonfire_pandora Plyr styles (feed/html_body previews).
+ * Add one line to the umbrella `assets/css/app.css`:
+ *   @import "../../extensions/federated_archives/assets/css/federated_archives_plyr.css";
+ * Requires `bonfire_pandora` and `yarn install` in `extensions/bonfire_pandora/assets`.
+ */
+@import "../../bonfire_pandora/assets/css/pandora_plyr.css";
