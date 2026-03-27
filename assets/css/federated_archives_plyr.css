@@ -1,7 +1,12 @@
 /**
- * Federated Archives flavour: composes bonfire_pandora Plyr styles (feed/html_body previews).
- * Add one line to the umbrella `assets/css/app.css`:
+ * Federated Archives flavour — Plyr base CSS + PanDoRa preview layout (bonfire_pandora).
+ *
+ * Umbrella: add exactly one line in `assets/css/app.css` (after tailwind/nprogress):
  *   @import "../../extensions/federated_archives/assets/css/federated_archives_plyr.css";
- * Requires `bonfire_pandora` and `yarn install` in `extensions/bonfire_pandora/assets`.
+ * (Use `deps/federated_archives/...` if the extension lives under deps/.)
+ *
+ * Requires `yarn install` in `extensions/bonfire_pandora` (root `package.json` ships `plyr`).
+ * Top-level plyr.css here so Tailwind bundles it (nested imports from app.css alone often drop it).
  */
-@import "../../bonfire_pandora/assets/css/pandora_plyr.css";
+@import "../../../bonfire_pandora/node_modules/plyr/dist/plyr.css";
+@import "../../../bonfire_pandora/assets/css/pandora_plyr.css";
