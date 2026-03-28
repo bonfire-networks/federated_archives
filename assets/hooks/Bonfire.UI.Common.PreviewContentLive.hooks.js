@@ -255,6 +255,9 @@ function shouldHandlePreviewClick(e, trigger, pointerState) {
   if (
     e.target.closest(".pandora-video-preview-wrapper") ||
     e.target.closest("video.pandora-video-preview") ||
+    e.target.closest(".plyr") ||
+    e.target.closest(".plyr__video-wrapper") ||
+    e.target.closest(".plyr__poster") ||
     e.target.closest(".plyr__controls")
   ) {
     return false;
