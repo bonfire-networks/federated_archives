@@ -8,6 +8,13 @@ Federated Archives bundles essential extensions from [Social](https://github.com
 
 - [Bonfire.Pandora](https://github.com/bonfire-networks/bonfire_pandora): Integration with the [pan.do/ra](https://code.0x2620.org/0x2620/pandora) API to load, search, filter, curate, annotate movies (*You must have a working pandora instance to use this extension*)
 - [Bonfire.Open.Id](https://github.com/bonfire-networks/bonfire_open_id)
+
+### Frontend (Plyr, hooks, CSS)
+
+- **LiveView hooks** are wired via `config/current_flavour/deps.hooks.js` (see `bonfire_live.js`), not `config/deps.hooks.js`.
+- **`yarn` JS deps**: run `config/current_flavour/deps.js.sh` (includes `bonfire_pandora`) and `yarn install` in `extensions/bonfire_pandora` (root `package.json` provides `plyr` for esbuild + CSS).
+- **CSS (flavour bundle)**: `assets/css/federated_archives_plyr.css` pulls in Plyr’s `plyr.css` from `bonfire_pandora/node_modules` and then `bonfire_pandora`’s `pandora_plyr.css` (preview layout). The umbrella only needs **one** line in `assets/css/app.css`: `@import "../../extensions/federated_archives/assets/css/federated_archives_plyr.css";` — adjust the path if the extension is under `deps/`. After upstream merges, preserve that line (or re-apply from this README).
+
 ## Releases
 
 *No public releases yet*
