@@ -22,9 +22,9 @@ let InfiniteScroll = {
   },
 
   getContainer() {
-    return this.containerType === "filter" 
-      ? this.el.querySelector('ul.menu')
-      : this.el;
+    if (this.containerType !== "filter") return this.el;
+    // Widget lists may use DaisyUI `menu` or plain `ul` (e.g. bonfire_pandora search filters).
+    return this.el.querySelector("ul.menu") || this.el.querySelector("ul");
   },
 
   setupScrollListener() {
@@ -124,10 +124,12 @@ let InfiniteScroll = {
     
     // Different checks for filters vs search results
     if (this.containerType === "filter") {
-      if (!entry.isIntersecting || 
-          this.pending || 
+      // Like main results: do not require isScrolling — IntersectionObserver is async and
+      // isScrolling often resets before the callback runs, so load-more never fired.
+      if (!entry.isIntersecting ||
+          this.pending ||
           this.el.dataset.loading === "true" ||
-          !this.isScrolling) {  // Only load if user has scrolled the container
+          !this.hasItems()) {
         return;
       }
     } else {
