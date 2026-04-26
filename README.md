@@ -13,7 +13,13 @@ Federated Archives bundles essential extensions from [Social](https://github.com
 
 - **LiveView hooks** are wired via `config/current_flavour/deps.hooks.js` (see `bonfire_live.js`), not `config/deps.hooks.js`.
 - **`yarn` JS deps**: run `config/current_flavour/deps.js.sh` (includes `bonfire_pandora`) and `yarn install` in `extensions/bonfire_pandora` (root `package.json` provides `plyr` for esbuild + CSS).
-- **CSS (flavour bundle)**: `assets/css/federated_archives_plyr.css` pulls in Plyr’s `plyr.css` from `bonfire_pandora/node_modules` and then `bonfire_pandora`’s `pandora_plyr.css` (preview layout). The umbrella only needs **one** line in `assets/css/app.css`: `@import "../../extensions/federated_archives/assets/css/federated_archives_plyr.css";` — adjust the path if the extension is under `deps/`. After upstream merges, preserve that line (or re-apply from this README).
+- **CSS (flavour bundle)**: `assets/css/federated_archives_plyr.css` is a **generated, flat** file (no nested `@import`) so Tailwind’s `build.css` keeps Plyr + PanDoRa rules. **Regenerate** after changing Plyr version or `pandora_plyr.css`:
+  - `yarn install` in `extensions/bonfire_pandora`
+  - `./extensions/federated_archives/assets/css/build-federated_archives_plyr.sh`
+  - Commit the updated `federated_archives_plyr.css` in this repo.
+  The umbrella only needs **one** line in `assets/css/app.css`: `@import "../../extensions/federated_archives/assets/css/federated_archives_plyr.css";` — adjust the path if the extension lives under `deps/` (e.g. `../../../../deps/federated_archives/...` from `deps/bonfire_ui_common/assets/css/`).
+
+- **Design note (Italian, bonfire_lab):** `docs_custom/bonfire_pandora/FEED_PLYR_CSS_E_INDIPENDENZA_UMBRELLA.md` — CSS feed + Typography, indipendenza delle estensioni dall’umbrella, e **`config/current_flavour/assets/hooks/Bonfire.UI.Common.PreviewContentLive.hooks.js`** (deve contenere le esclusioni click PanDoRa; il file solo sotto `extensions/federated_archives/assets/hooks/` non basta se il bundle importa il flavour).
 
 ## Releases
 
