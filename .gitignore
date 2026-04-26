@@ -45,4 +45,4 @@ deps.path
 /forks
 /extensions
 
-.\#*
+.\#**.swp
