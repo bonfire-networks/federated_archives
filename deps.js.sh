@@ -9,3 +9,6 @@ DEPS='iconify_ex bonfire_ui_common bonfire_editor_milkdown bonfire_geolocate'
 
 chmod +x ./js-deps-get.sh
 ./js-deps-get.sh "$DEPS" $@
+
+# Re-add the Plyr/PanDoRa CSS @import to bonfire_ui_common's app.css (lost when that dep is updated).
+sh ./extensions/federated_archives/assets/css/ensure-app-css-import.sh || true

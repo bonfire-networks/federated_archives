@@ -18,6 +18,7 @@ Federated Archives bundles essential extensions from [Social](https://github.com
   - `./extensions/federated_archives/assets/css/build-federated_archives_plyr.sh`
   - Commit the updated `federated_archives_plyr.css` in this repo.
   The umbrella only needs **one** line in `assets/css/app.css`: `@import "../../extensions/federated_archives/assets/css/federated_archives_plyr.css";` — adjust the path if the extension lives under `deps/` (e.g. `../../../../deps/federated_archives/...` from `deps/bonfire_ui_common/assets/css/`).
+- **Keeping that `@import` update-safe**: it lives inside `bonfire_ui_common`'s `app.css` (a dep file), so it is wiped whenever that dep is updated — which is why Plyr renders unstyled (giant icons) after an update. `assets/css/ensure-app-css-import.sh` re-adds it idempotently and is called from the flavour's `deps.js.sh`, so it runs automatically during `just update` (after deps are refreshed). Run it manually any time with: `sh ./extensions/federated_archives/assets/css/ensure-app-css-import.sh`.
 
 - **Design note (Italian, bonfire_lab):** `docs_custom/bonfire_pandora/FEED_PLYR_CSS_E_INDIPENDENZA_UMBRELLA.md` — CSS feed + Typography, indipendenza delle estensioni dall’umbrella, e **`config/current_flavour/assets/hooks/Bonfire.UI.Common.PreviewContentLive.hooks.js`** (deve contenere le esclusioni click PanDoRa; il file solo sotto `extensions/federated_archives/assets/hooks/` non basta se il bundle importa il flavour).
 

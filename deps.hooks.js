@@ -30,8 +30,10 @@ import { GeolocateHooks } from "./../../deps/bonfire_geolocate/assets/js/extensi
 
 // import LiveSelect from "./../../deps/live_select/assets/js/live_select"
 import LiveSelect from "./../../deps/live_select/priv/static/live_select.min.js"
-import PlyrInit from "./../../deps/bonfire_pandora/lib/web/hooks/plyr_init.hooks.js"
+// PanDoRa hooks (Plyr, etc.) live in extensions/bonfire_pandora/assets/js/extension.js — always
+// import from the path dep at extensions/bonfire_pandora, never the orphaned deps/bonfire_pandora copy.
+import { PandoraHooks } from "./../../extensions/bonfire_pandora/assets/js/extension"
 
-Object.assign(ExtensionHooks, LiveSelect, GeolocateHooks, { PlyrInit }) // CopyHooks, TooltipHooks, EditorCkHooks, EditorQuillHooks
+Object.assign(ExtensionHooks, LiveSelect, GeolocateHooks, PandoraHooks)
 
 export { ExtensionHooks }
