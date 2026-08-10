@@ -1,4 +1,8 @@
+# NOTE: ember deps ARE inherited, other flavours deps are NOT. Mess reads exactly two dep lists: this file (which install.sh copies to config/current_flavour/) and the base ember one (config/deps.*, linked in for every flavour) — so anything ember already provides is available here for free.
+# But a PARENT flavour contributes no deps: its installer only copies config/, migrations and templates. So every dep that social adds ON TOP of ember and that this flavour wants must be repeated below.
+
 # bonfire = "https://github.com/bonfire-networks/bonfire"
+ember = "https://github.com/bonfire-networks/ember"
 social = "https://github.com/bonfire-networks/social"
 bonfire_pandora = "https://github.com/bonfire-networks/bonfire_pandora#dev"
 bonfire_ui_social = "https://code.etna.foundation/Bonfire/bonfire_ui_social_federated_archives"
@@ -20,6 +24,8 @@ bonfire_api_graphql = "https://github.com/bonfire-networks/bonfire_api_graphql"
 # absinthe_client = "https://github.com/bonfire-networks/absinthe_client"
 
 bonfire_open_id = "https://github.com/bonfire-networks/bonfire_open_id"
+
+bonfire_articles = "https://github.com/bonfire-networks/bonfire_articles"
 
 ## EXPERIMENTAL ##
 # bonfire_poll = "https://github.com/bonfire-networks/bonfire_poll"
